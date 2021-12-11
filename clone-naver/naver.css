@@ -6,6 +6,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: Dotum, Helvetica, sans-serif;
   /* 4-3/7:00 */
 }
 .blind{
@@ -26,14 +27,87 @@ html, body {
   border: 1px solid black;
   border-radius: 50px;
 } */
+
 .center-align /*div는 생략할 수 있음*/
 {
   margin: 0px auto;
   width: 1080px;
+  height: 160px;
+  position: relative;
+  padding: 0 30px;
+}
+
+div#header-top{
+  margin-top: 10px;
+  float: right;
+  align-items: center;
+  display: flex;
+}
+.link{
+  color: #888;
+  letter-spacing:  -1px;
+  font-size: 11px;
+  line-height: 22px;
+  text-decoration-line: none;
+  /* letter-spacing: -1px;
+  font-size: 20px;
+  line-height: 22px; */
+}
+.link::after{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(./sp_main_57f073.png);
+    background-size: 444px 439px;
+    background-position: -373px -352px;
+   background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: 0 0 0 3px;
+}
+#header_top .sa_bar{
+  float: left;
+  width: 1px;
+  height: 10px;
+  margin: 3px 7px;
+  background-color: #e4e8eb;
+}
+a{
+  text-decoration: none;
+}
+.jn_link .jn_icon{
+  background-image: url(./sp_main_57f073.png);
+  display: inline-block;
+  width: 60px;
+  height: 10px;
+  background-position: -285px -267px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  margin: 3px;
+  background-size: 444px 439px;
+}
+.hb_link{
+  margin-left: 6px;
+}
+.hb_link .hb_icon{
+  background-image: url(./sp_main_57f073.png);
+  display: inline-block;
+  width: 34px;
+  height: 11px;
+  background-position: -220px -144px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  margin: 3px 3px 2px;
+  background-size: 444px 439px;
 }
 div#header-search{
+  clear: both;
   display: flex;
   align-items: center;
+  /* position: absolute;
+  top: 50%;
+  left: 268px;
+  margin-top: -28px; */
 /*세로 수평을 맞췄다
 강의내용X구글링으로 함
 margin을 건드려서는 해결이 안됨.*/
@@ -61,9 +135,11 @@ div#header-search fieldset input{
   height: 24px;
   padding: 13px 15px;
   margin: 1px;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
   /* vertical-align의 속성 알아보기
-   middle top bottom의 차이점 알기 */
+   middle top bottom의 차이점 알기
+   11/19 이 vertical-bottom때문에 옆에 키보드와 검색기록창이
+   vertical-middle 적용이 안됐다. 일단 취소, 추후 검토*/
 }
 div#header-search button{
   width: 56px;
@@ -89,6 +165,17 @@ div#header-search button{
   display: inline-block;
 }
 
+/* .naver-logo{
+  display: inline-block;
+  width: 222px;
+  height: 52px;
+  background-image: url(./sp_main_57f073.png);
+  background-size: 444px 439px;
+  background-position: 0 -158px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: '';
+} */
 div#header-search h2{
   display: none;
 }
@@ -98,11 +185,38 @@ div#header-search h1 {
   display: inline-block;
   background-image: url(./sp_search.png);
   background-position: -4px -6px;
-  background-repeat: no-repeat; /*빈 공간을 이미지 반복으로 채우지 않음*/
-  /* 위 세줄은 다음과 같이 1줄로 줄일 수 있음
-  background: url(./sp_search.png) no-repeat -4px -6px; */
+  background-repeat: no-repeat;
+  /*빈 공간을 이미지 반복으로 채우지 않음
+   위 세줄은 다음과 같이 1줄로 줄일 수 있음*/
+  background: url(./sp_search.png) no-repeat -4px -6px;
   text-indent: 100%;
   overflow: hidden;
+}
+
+#search-keyboard{
+  background-image: url(./sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -33px -60px;
+  width: 19px;
+  height: 11px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+#search-history{
+  background-image: url(./sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -87px -60px;
+  width: 9px;
+  height: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav{
+  vertical-align: middle;
+  border-top: 1px solid #ebeef3;
+  border-bottom: 1px solid #d1d8e4;
 }
 
 nav ul{
@@ -142,6 +256,34 @@ nav li:nth-child(5) span:first-child{
   background-position: -279px -156px;
 }
 nav li:nth-child(6) span:first-child{
-  width: 25px;
-  background-position: 0 -285px;
+  width: 33px;
+  background-position: -69px -286px;
+}
+
+.nav-group-case{
+  position: relative;
+  width: 1114px;
+  padding: 0 -94px;
+  margin: 0 auto;
+}
+.nav-group /*div는 생략할 수 있음*/
+{
+  position: relative;
+  padding: 11px 270px 11px 30px;
+}
+
+.nav-group ul{
+  display: inline-block;
+  vertical-align:middle;
+  /* float: left; */
+}
+
+div .nav_divider{
+  /* float: left; */
+  vertical-align: middle;
+  display: inline-block;
+  margin: -4px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
 }
