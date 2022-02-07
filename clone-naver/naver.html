@@ -5,7 +5,6 @@
     <title>NAVER</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?1"/>
     <link rel="stylesheet" href="./naver.css">
-
   </head>
   <body>
     <header>
@@ -52,10 +51,16 @@
           </fieldset>
         </div>
       </div>
+
     </header>
     <nav>
       <div class="nav-group-case">
         <div class="nav-group">
+          <div id="search-ranking">
+            <h2 class="blind">실시간 검색어</h2>
+            <span id="rank-number">1</span>
+            <span id="rank-title">제로초</span>
+          </div>
           <ul>
             <li><a href=""><span></span><span class="blind">메일</span></a></li>
             <li><a href=""><span></span><span class="blind">카페</span></a></li>
@@ -63,33 +68,100 @@
             <li><a href=""><span></span><span class="blind">지식iN</span></a></li>
             <li><a href=""><span></span><span class="blind">쇼핑</span></a></li>
             <li><a href=""><span></span><span class="blind">Pay</span></a></li>
+            <div class="nav_divider"></div>
+            <li><a href=""><span></span><span class="blind">사전</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">뉴스</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">증권</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">부동산</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">지도</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">영화</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">뮤직</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">책</span></a></li> <!-- list item -->
+            <li><a href=""><span></span><span class="blind">웹툰</span></a></li> <!-- list item -->
             <!-- <li><a href=""><span></span><span class="blind">네이버페이</span></a></li>
             <li><a href=""><span></span><span class="blind">네이버TV</span></a></li> -->
           </ul>
-          <div class="nav_divider"></div>
+          <ul>
+            <li class="more"><a href=""><span></span><span class="blind">더보기</span></a></li> <!-- list item -->
+          </ul>
         </div>
       </div>
     </nav>
 
-    <main>
-      <h2>실시간 검색어</h2>
-      <h3>연합뉴스</h3>
-      <ol>
-        <li>와 구역 나누는거 난해해</li>
-        <li>여언습이 마않이 필요하겠꾼요~?</li>
-      </ol>
-      <h3>언론사 목록</h3>
-      <ul>
-        <li><img src="./해럴드경제.png" alt="해럴드경제"/></li>
-        <li><img src="./뉴시스.png" alt="뉴시스"/></li>
-      </ul>
-      <h2>실시간 검색어</h2>
-      <h3>로그인</h3>
-      <h3>뉴스</h3>
-      <h3>법률</h3>
-      <h3>쇼핑</h3>
-      <h6>쇼핑</h6>
+    <main style="background-color: #f2f4f7;">
+      <div id="main-centered" class="center-align">
+
+        <div id="main-first-block">
+          <div id="main-ad">
+          </div>
+          <div id="main-login">
+            <h3>로그인</h3>
+          </div>
+        </div>
+
+        <div id="main-second-block">
+          <div class="inline-block">
+            <div id="main-ytn">
+              <h3>연합뉴스</h3>
+              <ol>
+                <li>와 구역 나누는거 난해해</li>
+                <li>여언습이 마않이 필요하겠꾼요~?</li>
+              </ol>
+            </div>
+            <div id="main-newsstand">
+              <h3>언론사 목록</h3>
+              <ul>
+                <li><img src="./해럴드경제.png" alt="해럴드경제" /></li>
+                <li><img src="./뉴시스.png" alt="뉴시스" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+                <li><img src="./해럴드경제.png" alt="해럴드경제" /></li>
+                <li><img src="./뉴시스.png" alt="뉴시스" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+                <li><img src="./해럴드경제.png" alt="해럴드경제" /></li>
+                <li><img src="./뉴시스.png" alt="뉴시스" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="inline-block" style="float: right;">
+              <div id="main-weather"></div>
+              <div id="main-second-ad"></div>
+          </div>
+        </div>
+        <div id="main-third-block">
+            <div id="main-category">
+                <h3>주제별 보기</h3>
+            </div>
+            <div id="main-shopping">
+              <h3>쇼핑</h3>
+            </div>
+        </div>
+
+        <div id="main-forth-block" class="inline-block">
+          <div id="main-event">
+            <h3>이벤트</h3>
+          </div>
+          <div id="main-third-ad">
+          </div>
+        </div>
+        <!-- <h2>실시간 검색어</h2>
+        <h3>뉴스</h3>
+        <h3>법률</h3>
+        <h3>쇼핑</h3>
+        <h6>쇼핑</h6> -->
+
+      </div>
     </main>
+
     <footer>
       <div>공지사항</div>
       <div>Creators</div>

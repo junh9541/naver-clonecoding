@@ -1,7 +1,13 @@
 /*Cascating style sheet 조상에 적용된 style이 자식에게도 그대로 적용됨.*/
 /*선택자 selection*/
-*{
+/* *{
   box-sizing: content-box;
+} */
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
 }
 html, body {
   margin: 0;
@@ -17,6 +23,10 @@ html, body {
   margin: -1px;
   overflow: hidden;
 }
+
+.inline-block{
+  display: inline-block;
+}
 /* #fix{
   position: fixed;
   display: inline-block;
@@ -30,11 +40,8 @@ html, body {
 
 .center-align /*div는 생략할 수 있음*/
 {
-  margin: 0px auto;
+  margin: 0 auto;
   width: 1080px;
-  height: 160px;
-  position: relative;
-  padding: 0 30px;
 }
 
 div#header-top{
@@ -142,14 +149,16 @@ div#header-search fieldset input{
    vertical-middle 적용이 안됐다. 일단 취소, 추후 검토*/
 }
 div#header-search button{
-  width: 56px;
-  height: 56px;
+  /* width: 56px;
+  height: 56px; */
+  width: 49px;
+  height: 49px;
   border: none;
   padding: 0;
   background: #03cf5d;
   position: absolute;
   right: -2px;
-  top: -2px;
+  top: -1px;
   /* background-image: url(./sp_search.png);
   background-position: 11px -45px;
   background-repeat: no-repeat; */
@@ -200,7 +209,7 @@ div#header-search h1 {
   width: 19px;
   height: 11px;
   display:inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 #search-history{
@@ -210,7 +219,8 @@ div#header-search h1 {
   width: 9px;
   height: 4px;
   display: inline-block;
-  vertical-align: middle;
+  margin: 0 6px;
+  vertical-align: bottom;
 }
 
 nav{
@@ -259,6 +269,55 @@ nav li:nth-child(6) span:first-child{
   width: 33px;
   background-position: -69px -286px;
 }
+nav li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+
+nav li:nth-child(8) span:first-child {
+    width: 26px;
+    background-position: -279px -208px;
+}
+
+nav li:nth-child(9) span:first-child {
+    width: 26px;
+    background-position: -128px -104px;
+}
+
+nav li:nth-child(10) span:first-child {
+    width: 26px;
+    background-position: -36px -259px;
+}
+
+nav li:nth-child(11) span:first-child {
+    width: 39px;
+    background-position: -151px -156px;
+}
+
+nav li:nth-child(12) span:first-child {
+    width: 26px;
+    background-position: -279px -130px;
+}
+
+nav li:nth-child(13) span:first-child {
+    width: 26px;
+    background-position: -234px -233px;
+}
+
+nav li:nth-child(14) span:first-child {
+    width: 26px;
+    background-position: -72px -259px;
+}
+
+nav li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+nav li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
 
 .nav-group-case{
   position: relative;
@@ -269,13 +328,19 @@ nav li:nth-child(6) span:first-child{
 .nav-group /*div는 생략할 수 있음*/
 {
   position: relative;
-  padding: 11px 270px 11px 30px;
+  padding: 11px 225px 11px 30px;
 }
 
 .nav-group ul{
   display: inline-block;
   vertical-align:middle;
   /* float: left; */
+}
+
+li.more:first-child span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
+    margin-left: 45px;
 }
 
 div .nav_divider{
@@ -286,4 +351,178 @@ div .nav_divider{
   width: 1px;
   height: 14px;
   background: #ebeef3;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 16px;
+    right: 100px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+#main-centered {
+    padding: 8px 10px;
+    width: 1100px;
+}
+
+#main-first-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-ad{
+  display: inline-block;
+  width: 740px;
+  height: 120px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background: white;
+  float: left;
+}
+
+#main-login{
+  display: inline-block;
+  width:332px;
+  height: 120px;
+  vertical-align: top;
+  margin-bottom: 8px;
+  background: white;
+  float: left;
+}
+
+#main-second-block{
+  vertical-align: top;
+}
+#main-second-block .inline-block:first-child {
+  width: 740px;
+  vertical-align: top;
+  /*float: left;
+  margin-right: 8px;*/
+}
+
+#main-second-block .inline-block:last-child {
+  width: 332px;
+  vertical-align: top;
+}
+
+#main-ytn {
+  display: inline-block;
+  width: 740px;
+  height: 46px;
+  background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+    display: inline-block;
+}
+
+#main-newsstand{
+  display: inline-block;
+  width: 740px;
+  height: 246px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newsstand li {
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center; /*가로정렬은 부모에서 이렇게*/
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*세로 정렬은 자식에서 이렇게 */
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    background-color: white;
+    margin-bottom: 8px;
+    vertical-align: top;
+}
+
+#main-second-ad{
+  display: inline-block;
+  width: 332px;
+  height: 150px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background: white;
+}
+
+#main-category{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 740px;
+  height: 837px;
+  background: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#main-shopping{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 332px;
+  height: 837px;
+  background: white;
+  margin-bottom: 8px;
+}
+
+#main-third-block,
+#main-fourth-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-event{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;  vertical-align: top;
+  width: 740px;
+  height: 130px;
+  margin-right: 8px;
+  background: white;
+}
+
+#main-third-ad{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 332px;
+  height: 130px;
+  background: white;
 }
