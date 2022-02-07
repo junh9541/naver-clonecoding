@@ -1,0 +1,528 @@
+/*Cascating style sheet 조상에 적용된 style이 자식에게도 그대로 적용됨.*/
+/*선택자 selection*/
+/* *{
+  box-sizing: content-box;
+} */
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Dotum, Helvetica, sans-serif;
+  /* 4-3/7:00 */
+}
+.blind{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.inline-block{
+  display: inline-block;
+}
+/* #fix{
+  position: fixed;
+  display: inline-block;
+  top: 50px;
+  left: : 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50px;
+} */
+
+.center-align /*div는 생략할 수 있음*/
+{
+  margin: 0 auto;
+  width: 1080px;
+}
+
+div#header-top{
+  margin-top: 10px;
+  float: right;
+  align-items: center;
+  display: flex;
+}
+.link{
+  color: #888;
+  letter-spacing:  -1px;
+  font-size: 11px;
+  line-height: 22px;
+  text-decoration-line: none;
+  /* letter-spacing: -1px;
+  font-size: 20px;
+  line-height: 22px; */
+}
+.link::after{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(./sp_main_57f073.png);
+    background-size: 444px 439px;
+    background-position: -373px -352px;
+   background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: 0 0 0 3px;
+}
+#header_top .sa_bar{
+  float: left;
+  width: 1px;
+  height: 10px;
+  margin: 3px 7px;
+  background-color: #e4e8eb;
+}
+a{
+  text-decoration: none;
+}
+.jn_link .jn_icon{
+  background-image: url(./sp_main_57f073.png);
+  display: inline-block;
+  width: 60px;
+  height: 10px;
+  background-position: -285px -267px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  margin: 3px;
+  background-size: 444px 439px;
+}
+.hb_link{
+  margin-left: 6px;
+}
+.hb_link .hb_icon{
+  background-image: url(./sp_main_57f073.png);
+  display: inline-block;
+  width: 34px;
+  height: 11px;
+  background-position: -220px -144px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  margin: 3px 3px 2px;
+  background-size: 444px 439px;
+}
+div#header-search{
+  clear: both;
+  display: flex;
+  align-items: center;
+  /* position: absolute;
+  top: 50%;
+  left: 268px;
+  margin-top: -28px; */
+/*세로 수평을 맞췄다
+강의내용X구글링으로 함
+margin을 건드려서는 해결이 안됨.*/
+}
+
+div#header-search fieldset, #header-search h1{
+  display: inline-block;
+}
+
+
+div#header-search fieldset{
+  width: 582px;
+  height: 52px;
+  border: 2px solid #19ce60;
+  padding: 0;
+  margin: 1px;
+  margin-left: 20px;
+  position: relative;
+}
+div#header-search fieldset input{
+  border: none;
+  margin: 0;
+  outline: none;
+  width: 444px;
+  height: 24px;
+  padding: 13px 15px;
+  margin: 1px;
+  /* vertical-align: bottom; */
+  /* vertical-align의 속성 알아보기
+   middle top bottom의 차이점 알기
+   11/19 이 vertical-bottom때문에 옆에 키보드와 검색기록창이
+   vertical-middle 적용이 안됐다. 일단 취소, 추후 검토*/
+}
+div#header-search button{
+  /* width: 56px;
+  height: 56px; */
+  width: 49px;
+  height: 49px;
+  border: none;
+  padding: 0;
+  background: #03cf5d;
+  position: absolute;
+  right: -2px;
+  top: -1px;
+  /* background-image: url(./sp_search.png);
+  background-position: 11px -45px;
+  background-repeat: no-repeat; */
+}
+
+.search_submit{
+  width: 22px;
+  height: 22px;
+  margin: 14px;
+  background-image: url(./sp_search.png);
+  background-position: -3px -60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+/* .naver-logo{
+  display: inline-block;
+  width: 222px;
+  height: 52px;
+  background-image: url(./sp_main_57f073.png);
+  background-size: 444px 439px;
+  background-position: 0 -158px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: '';
+} */
+div#header-search h2{
+  display: none;
+}
+div#header-search h1 {
+  width: 205px;
+  height: 48px;
+  display: inline-block;
+  background-image: url(./sp_search.png);
+  background-position: -4px -6px;
+  background-repeat: no-repeat;
+  /*빈 공간을 이미지 반복으로 채우지 않음
+   위 세줄은 다음과 같이 1줄로 줄일 수 있음*/
+  background: url(./sp_search.png) no-repeat -4px -6px;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+#search-keyboard{
+  background-image: url(./sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -33px -60px;
+  width: 19px;
+  height: 11px;
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+#search-history{
+  background-image: url(./sp_search.png);
+  background-repeat: no-repeat;
+  background-position: -87px -60px;
+  width: 9px;
+  height: 4px;
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: bottom;
+}
+
+nav{
+  vertical-align: middle;
+  border-top: 1px solid #ebeef3;
+  border-bottom: 1px solid #d1d8e4;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li{
+  display: inline-block;
+}
+nav li span:first-child{
+  margin-left: 14px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(./sp_nav.png);
+  background-repeat: no-repeat;
+}
+nav li:first-child span:first-child{
+  width: 25px;
+  background-position: 0 -285px;
+  margin-left: 0;
+}
+nav li:nth-child(2) span:first-child{
+  width: 27px;
+    background-position: -279px -52px;
+}
+nav li:nth-child(3) span:first-child{
+  width: 40px;
+  background-position: -100px -182px;
+}
+nav li:nth-child(4) span:first-child{
+  width: 40px;
+  background-position: -101px -156px;
+}
+nav li:nth-child(5) span:first-child{
+  width: 26px;
+  background-position: -279px -156px;
+}
+nav li:nth-child(6) span:first-child{
+  width: 33px;
+  background-position: -69px -286px;
+}
+nav li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+
+nav li:nth-child(8) span:first-child {
+    width: 26px;
+    background-position: -279px -208px;
+}
+
+nav li:nth-child(9) span:first-child {
+    width: 26px;
+    background-position: -128px -104px;
+}
+
+nav li:nth-child(10) span:first-child {
+    width: 26px;
+    background-position: -36px -259px;
+}
+
+nav li:nth-child(11) span:first-child {
+    width: 39px;
+    background-position: -151px -156px;
+}
+
+nav li:nth-child(12) span:first-child {
+    width: 26px;
+    background-position: -279px -130px;
+}
+
+nav li:nth-child(13) span:first-child {
+    width: 26px;
+    background-position: -234px -233px;
+}
+
+nav li:nth-child(14) span:first-child {
+    width: 26px;
+    background-position: -72px -259px;
+}
+
+nav li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+nav li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
+
+.nav-group-case{
+  position: relative;
+  width: 1114px;
+  padding: 0 -94px;
+  margin: 0 auto;
+}
+.nav-group /*div는 생략할 수 있음*/
+{
+  position: relative;
+  padding: 11px 225px 11px 30px;
+}
+
+.nav-group ul{
+  display: inline-block;
+  vertical-align:middle;
+  /* float: left; */
+}
+
+li.more:first-child span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
+    margin-left: 45px;
+}
+
+div .nav_divider{
+  /* float: left; */
+  vertical-align: middle;
+  display: inline-block;
+  margin: -4px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 16px;
+    right: 100px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+#main-centered {
+    padding: 8px 10px;
+    width: 1100px;
+}
+
+#main-first-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-ad{
+  display: inline-block;
+  width: 740px;
+  height: 120px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background: white;
+  float: left;
+}
+
+#main-login{
+  display: inline-block;
+  width:332px;
+  height: 120px;
+  vertical-align: top;
+  margin-bottom: 8px;
+  background: white;
+  float: left;
+}
+
+#main-second-block{
+  vertical-align: top;
+}
+#main-second-block .inline-block:first-child {
+  width: 740px;
+  vertical-align: top;
+  /*float: left;
+  margin-right: 8px;*/
+}
+
+#main-second-block .inline-block:last-child {
+  width: 332px;
+  vertical-align: top;
+}
+
+#main-ytn {
+  display: inline-block;
+  width: 740px;
+  height: 46px;
+  background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+    display: inline-block;
+}
+
+#main-newsstand{
+  display: inline-block;
+  width: 740px;
+  height: 246px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newsstand li {
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center; /*가로정렬은 부모에서 이렇게*/
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*세로 정렬은 자식에서 이렇게 */
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    background-color: white;
+    margin-bottom: 8px;
+    vertical-align: top;
+}
+
+#main-second-ad{
+  display: inline-block;
+  width: 332px;
+  height: 150px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background: white;
+}
+
+#main-category{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 740px;
+  height: 837px;
+  background: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#main-shopping{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 332px;
+  height: 837px;
+  background: white;
+  margin-bottom: 8px;
+}
+
+#main-third-block,
+#main-fourth-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-event{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;  vertical-align: top;
+  width: 740px;
+  height: 130px;
+  margin-right: 8px;
+  background: white;
+}
+
+#main-third-ad{
+  /* display: inline-block; 줄바꿈됨*/
+  float: left;
+  width: 332px;
+  height: 130px;
+  background: white;
+}
