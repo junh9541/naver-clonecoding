@@ -1,0 +1,14 @@
+제로초 네이버 메인 클론코딩 7-4까지 수강
+
+배운 부분:
+기초적인 html, css 사용 방법
+화면 레이아웃 나누기
+백그라운드 이미지 넣기
+display block/inline-block
+정렬(float, vertical-align, text-align, position:relative / top:50% / transform:translateY(-50%))
+다른 웹페이지 넣기(iframe)
+마우스 갖다대면 팝업 뜨게 하기(실검부분)
+margin, padding이랑 씨름하기
+
+느낀점: 웹페이지 프런트는 완성된 예쁜 이미지와 아이콘을 정렬하는 노가다구나! 
+
